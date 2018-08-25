@@ -95,15 +95,15 @@
 	        </li>
 			<!-- categories_name  分类   --> 
 	        
-	        <!-- archives  归档   --> 
-	        
 	        <li class="active">
-	            <a href="#s1">归档</a>
+	            <a href="#s1">分类</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="archive-link" href="../archives/2018/08/">August 2018</a>
+	                        <a class="category-link" href="../categories/java类/">java类</a></li><li><a class="category-link" href="../categories/操作系统类/">操作系统类</a>
 	                    </ul>
 	        </li>
+	        
+	        <!-- archives  归档   --> 
 	        
 	        
 		        <!-- Pages 自定义   -->
@@ -143,7 +143,7 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://pdw83x8w3.bkt.clouddn.com/%E5%A3%81%E7%BA%B8.jpeg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >程序猿菜小白的成长之JS篇（一）</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >JS篇（一）</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
@@ -166,39 +166,44 @@
 <li><p><strong>嵌入在HTML标签中</strong></p>
 <p> JS必须嵌入到一个名叫<script src="引入外部js文件"></script>的标签中，方可运行脚本语言</p>
 <p><strong>二、JS的三种类型</strong></p>
-</li>
+<p>   <strong>（1）基本类型：</strong>number，string，boolean</p>
+<pre><code>number包含正数，负数，小数
+
+string由&apos;&apos;或&quot;&quot;定界
+
+boolean由true或false，但js中的boolean也包含更多情况，例如：存在表示                   true，不存在表示false
+</code></pre></li>
 </ol>
-<p>​      <strong>（1）基本类型：</strong>number，string，boolean</p>
-<p>​         number包含正数，负数，小数</p>
-<p>​         string由’’或””定界</p>
-<p>​         boolean由true或false，但js中的boolean也包含更多情况，例如：存在表示                   true，不存在表示false</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var num = 100;</span><br><span class="line">var str = &quot;哈哈&quot;;</span><br><span class="line">var flag = false;</span><br><span class="line">window.alert(num);</span><br><span class="line">window.alert(str);</span><br><span class="line">window.alert(flag);</span><br></pre></td></tr></table></figure>
-<p>​         <strong>（2）特殊类型</strong>：null，undefined</p>
-<p>​             null表示一个变量指向null</p>
-<p>​             undefined表示一个变量指向的值不确定</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">       var array = null;</span><br><span class="line">var student;</span><br><span class="line">alert(array);</span><br><span class="line">alert(student);</span><br></pre></td></tr></table></figure>
-<p>​         <strong>（3）复合类型：</strong>函数，对象，数组</p>
-<p>​             对象包含内置对象和自定义的对象</p>
-<h4 id="三、JS中有三种定义函数的方式"><a href="#三、JS中有三种定义函数的方式" class="headerlink" title="三、JS中有三种定义函数的方式"></a><strong>三、JS中有三种定义函数的方式</strong></h4><ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"哈哈"</span>;</span><br><span class="line"><span class="keyword">var</span> flag = <span class="literal">false</span>;</span><br><span class="line"><span class="built_in">window</span>.alert(num);</span><br><span class="line"><span class="built_in">window</span>.alert(str);</span><br><span class="line"><span class="built_in">window</span>.alert(flag);</span><br></pre></td></tr></table></figure>
+<pre><code>**（2）特殊类型**：null，undefined
+
+    null表示一个变量指向null
+
+    undefined表示一个变量指向的值不确定
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">       <span class="keyword">var</span> array = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">var</span> student;</span><br><span class="line">alert(array);</span><br><span class="line">alert(student);</span><br></pre></td></tr></table></figure>
+<pre><code>**（3）复合类型：**函数，对象，数组
+
+    对象包含内置对象和自定义的对象
+</code></pre><h4 id="三、JS中有三种定义函数的方式"><a href="#三、JS中有三种定义函数的方式" class="headerlink" title="三、JS中有三种定义函数的方式"></a><strong>三、JS中有三种定义函数的方式</strong></h4><ol>
 <li><p><strong>正常方式</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function mysum(num1,num2)&#123;</span><br><span class="line">	return num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line">var myresult = mysum(100,200);</span><br><span class="line">alert(&quot;myresult=&quot;+myresult);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">mysum</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> myresult = mysum(<span class="number">100</span>,<span class="number">200</span>);</span><br><span class="line">alert(<span class="string">"myresult="</span>+myresult);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>构造器方式</strong></p>
 </li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> var youresult = new Function(&quot;num1&quot;,&quot;num2&quot;,&quot;return num1+num2&quot;);</span><br><span class="line">alert( youresult(1000,2000) );</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> youresult = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"num1"</span>,<span class="string">"num2"</span>,<span class="string">"return num1+num2"</span>);</span><br><span class="line">alert( youresult(<span class="number">1000</span>,<span class="number">2000</span>) );</span><br></pre></td></tr></table></figure>
 <ol start="3">
 <li><strong>直接量或匿名或无名方式</strong></li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var theyresult = function(num1,num2)&#123;</span><br><span class="line">							return num1 + num2;	</span><br><span class="line">						 &#125;</span><br><span class="line">		alert( theyresult(10000,20000) );</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> theyresult = <span class="function"><span class="keyword">function</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">							<span class="keyword">return</span> num1 + num2;	</span><br><span class="line">						 &#125;</span><br><span class="line">		alert( theyresult(<span class="number">10000</span>,<span class="number">20000</span>) );</span><br></pre></td></tr></table></figure>
 <h4 id="四、JS中有四种对象"><a href="#四、JS中有四种对象" class="headerlink" title="四、JS中有四种对象"></a><strong>四、JS中有四种对象</strong></h4><ol>
 <li><strong>内置对象Date，Math，String，Array，。。。</strong> </li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str = new Date().toLocaleString();</span><br><span class="line">		window.document.write(&quot;&lt;font size=&apos;44&apos; color=&apos;red&apos;&gt;&quot;+str+&quot;&lt;/font&gt;&quot;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="keyword">new</span> <span class="built_in">Date</span>().toLocaleString();</span><br><span class="line">		<span class="built_in">window</span>.document.write(<span class="string">"&lt;font size='44' color='red'&gt;"</span>+str+<span class="string">"&lt;/font&gt;"</span>);</span><br></pre></td></tr></table></figure>
 <p>   2.<strong>自定义对象：Person，Card，。。。</strong> </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Student(id,name,sal)&#123;</span><br><span class="line">			//this指向s引用</span><br><span class="line">			this.id = id;</span><br><span class="line">			this.name = name;</span><br><span class="line">			this.sal = sal;</span><br><span class="line">		&#125;</span><br><span class="line">		var s = new Student(1,&quot;波波&quot;,7000);</span><br><span class="line">		document.write(&quot;编号:&quot; + s.id + &quot;&lt;br/&gt;&quot;);</span><br><span class="line">		document.write(&quot;姓名:&quot; + s.name + &quot;&lt;br/&gt;&quot;);</span><br><span class="line">		document.write(&quot;薪水:&quot; + s.sal + &quot;&lt;br/&gt;&quot;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">id,name,sal</span>)</span>&#123;</span><br><span class="line">			<span class="comment">//this指向s引用</span></span><br><span class="line">			<span class="keyword">this</span>.id = id;</span><br><span class="line">			<span class="keyword">this</span>.name = name;</span><br><span class="line">			<span class="keyword">this</span>.sal = sal;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">var</span> s = <span class="keyword">new</span> Student(<span class="number">1</span>,<span class="string">"波波"</span>,<span class="number">7000</span>);</span><br><span class="line">		<span class="built_in">document</span>.write(<span class="string">"编号:"</span> + s.id + <span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">		<span class="built_in">document</span>.write(<span class="string">"姓名:"</span> + s.name + <span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">		<span class="built_in">document</span>.write(<span class="string">"薪水:"</span> + s.sal + <span class="string">"&lt;br/&gt;"</span>);</span><br></pre></td></tr></table></figure>
 <p>  3.<strong>浏览器对象： window，document，status，location，history。。。</strong> </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function myrefresh()&#123;</span><br><span class="line">			window.history.go(0);</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myrefresh</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			<span class="built_in">window</span>.history.go(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
 <p>  4.<strong>ActiveX对象：ActiveXObject(“Microsoft.XMLHTTP”)，。。。</strong> </p>
 <p><img src="..\reader\309998.jpg" alt="" title="失眠"></p>
 
